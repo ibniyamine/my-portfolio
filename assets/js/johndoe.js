@@ -13,6 +13,23 @@
 */
 
 // smooth scroll
+
+document.getElementById('imprimerButton').addEventListener('click', function() {
+  imprimerCV('CV_ANOIR_IBNIYAMINE.pdf');
+});
+
+function imprimerCV(pdfPath) {
+  var iframe = document.createElement('iframe');
+  iframe.style.display = 'none';
+  iframe.src = pdfPath;
+
+  document.body.appendChild(iframe);
+
+  iframe.onload = function() {
+    iframe.contentWindow.print();
+    document.body.removeChild(iframe);
+  };
+}
 $(document).ready(function(){
     $(".navbar .nav-link").on('click', function(event) {
 
