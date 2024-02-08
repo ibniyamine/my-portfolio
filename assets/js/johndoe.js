@@ -14,22 +14,7 @@
 
 // smooth scroll
 
-document.getElementById('imprimerButton').addEventListener('click', function() {
-  imprimerCV('CV_ANOIR_IBNIYAMINE.pdf');
-});
 
-function imprimerCV(pdfPath) {
-  var iframe = document.createElement('iframe');
-  iframe.style.display = 'none';
-  iframe.src = pdfPath;
-
-  document.body.appendChild(iframe);
-
-  iframe.onload = function() {
-    iframe.contentWindow.print();
-    document.body.removeChild(iframe);
-  };
-}
 $(document).ready(function(){
     $(".navbar .nav-link").on('click', function(event) {
 
@@ -77,8 +62,8 @@ $(window).on("load", function() {
 function initMap() {
 // Styles a map in night mode.
     var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 40.674, lng: -73.945},
-        zoom: 12,
+        center: {lat: 14.70692000000001,   lng: -17.457677084653948},
+        zoom: 14,
         scrollwheel:  false,
         navigationControl: false,
         mapTypeControl: false,
